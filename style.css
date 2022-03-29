@@ -31,8 +31,14 @@ span{
     font-size: 1.5rem;
     text-align: center;
     color: rgb(231, 231, 231);
+}
+
+span:hover{
+    transform: scale(1.3);
+    transition: .5s;
     cursor: none;
 }
+
 .calculator{
     background-color: rgb(236, 240, 243);
     padding: 3.5rem 1.5rem 2rem 1.5rem;
