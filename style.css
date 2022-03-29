@@ -20,8 +20,8 @@ span{
     bottom: -3rem;
     font-size: 1.5rem;
     text-align: center;
-    color: rgb(223, 223, 223);
-
+    color: rgb(231, 231, 231);
+    cursor: none;
 }
 .calculator{
     background-color: rgb(236, 240, 243);
@@ -47,12 +47,35 @@ input{
 }
 
 button{
+	position: relative;
+	color: #000;
+ 	overflow: hidden;
     height: 2.7rem;
     width: 2.7rem;
     margin: .5rem;
     border-radius: 1.35rem;
     box-shadow: -5px -5px 10px rgb(255, 255, 255), 5px 5px 10px rgb(0, 0, 0, .15) ;
     cursor: pointer;
+}
+
+button:after {
+    content: "";
+    background: rgb(136, 136, 136);
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 250%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.5s
+}
+
+button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
 }
 
 .equal{
