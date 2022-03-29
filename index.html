@@ -8,32 +8,67 @@
     <title>Online Calculator</title>
 </head>
 <body>
-    <div class="container">
-        <div class="calculator">
-            
-            <div class="result">
-                <input type="text" name="" id="result">
-            </div>
+             <!-- Calculator Container  -->
 
-            <div class="button">
-                <button class=""></button>
-                <button class=""></button>
-                <button class=""></button>
-                <button class=""></button>
-                <button class=""></button>
-                <button class=""></button>
-                <button class=""></button>
-                <button class=""></button>
-                <button class=""></button>
-                <button class=""></button>
-                <button class=""></button>
-                <button class=""></button>
-                <button class=""></button>
-                <button class=""></button>
-                <button class=""></button>
-                <button class=""></button>
-            </div>
+    <div class="container">
+        <span>CALCULATOR</span>
+
+        <div class="calculator">
+
+            <input type="text" id="result">
+            <button onclick="Clear()">AC</button>
+            <button onclick="backSpace()" class="">DEL</button>
+            <button onclick="bttn('%')">%</button>
+            <button onclick="bttn('/')">÷</button>
+            <button onclick="bttn('1')">1</button>
+            <button onclick="bttn('2')">2</button>
+            <button onclick="bttn('3')">3</button>
+            <button onclick="bttn('*')">x</button>
+            <button onclick="bttn('4')">4</button>
+            <button onclick="bttn('5')">5</button>
+            <button onclick="bttn('6')">6</button>
+            <button onclick="bttn('-')" class="">-</button>
+            <button onclick="bttn('7')">7</button>
+            <button onclick="bttn('8')">8</button>
+            <button onclick="bttn('9')">9</button>
+            <button onclick="bttn('+')" class="">+</button>
+            <button onclick="bttn('.')" class="">.</button>
+            <button onclick="bttn('0')">0</button>
+            <button onclick="result()" class="equal">=</button>
+        
         </div>
+
     </div>
+
+
+
+
+    <script>
+
+                // Result Box Declaration
+        var resultDispay = document.getElementById('result');
+
+                // Button Sent to Result Box
+        function bttn(num){
+            resultDispay.value = resultDispay.value + num;
+        }
+
+                // Equal Button Calculate by 'eval()'
+        function result(){
+            resultDispay.value = eval(resultDispay.value);
+        }
+
+                // AC Button Clear everything
+        function Clear(){
+            resultDispay.value = null;
+        }
+
+                // Backspace Button Clear everything
+        function backSpace(){
+            resultDispay.value = resultDispay.value.slice(0, -1);
+        }
+
+    </script>
+
 </body>
 </html>
